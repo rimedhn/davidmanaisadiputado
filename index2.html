@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Manaiza - Diputado por Atlántida | Partido Nacional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #ffffff 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section-divider {
+            background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+            height: 2px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <img src="https://github.com/rimedhn/davidmanaisadiputado/blob/main/Rostro%20David%20Manaiza.png?raw=true" 
+                         alt="David Manaiza" 
+                         class="w-12 h-12 rounded-full object-cover border-2 border-blue-600"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hidden">
+                        <span class="text-white font-bold text-xl">DM</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">David Manaiza</h1>
+                        <p class="text-sm text-blue-600">Diputado por Atlántida</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#propuestas" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Propuestas</a>
+                    <a href="#sobre-mi" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Sobre Mí</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contacto</a>
+                </nav>
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#propuestas" class="block py-2 text-gray-700 hover:text-blue-600">Propuestas</a>
+                <a href="#sobre-mi" class="block py-2 text-gray-700 hover:text-blue-600">Sobre Mí</a>
+                <a href="#contacto" class="block py-2 text-gray-700 hover:text-blue-600">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20 relative overflow-hidden">
+        <div class="absolute top-4 right-4 z-10">
+            <img src="https://github.com/rimedhn/davidmanaisadiputado/blob/main/Bandera%20Partido%20Nacional%20de%20Honduras.png?raw=true" 
+                 alt="Bandera Partido Nacional" 
+                 class="w-16 h-12 object-cover rounded shadow-lg"
+                 onerror="this.style.display='none';">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left animate-fade-in">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        Un Futuro Próspero para
+                        <span class="text-blue-900">Atlántida</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 leading-relaxed text-blue-900">
+                        Abogado David Manaiza, candidato a Diputado por el Partido Nacional, 
+                        apoyando el movimiento presidencial de Nasry "Papi" Asfura
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button onclick="scrollToSection('propuestas')" class="bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-800 transition-colors">
+                            Ver Plan de Gobierno
+                        </button>
+                        <button onclick="scrollToSection('sobre-mi')" class="border-2 border-blue-900 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-900 hover:text-white transition-colors">
+                            Conocer al Candidato
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-center lg:justify-end">
+                    <img src="https://github.com/rimedhn/davidmanaisadiputado/blob/main/Manaiza_de_pie-removebg-preview.png?raw=true" 
+                         alt="David Manaiza de pie" 
+                         class="max-w-sm w-full h-auto object-contain"
+                         onerror="this.style.display='none';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Campaña -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestro Movimiento</h2>
+                <div class="section-divider w-24 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Junto a "Papi" Asfura y el Partido Nacional, trabajamos por el desarrollo de Honduras
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <!-- Concentración del Partido Nacional -->
+                <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-blue-600 opacity-90"></div>
+                        <div class="text-center text-white relative z-10">
+                            <svg class="w-16 h-16 mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-sm font-bold">Concentración Masiva</p>
+                            <p class="text-xs opacity-90">Partido Nacional 2024</p>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <p class="text-sm text-gray-600 text-center">Miles de hondureños apoyan nuestro movimiento</p>
+                    </div>
+                </div>
+                
+                <!-- Rally de Papi Asfura -->
+                <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-br from-blue-600 to-white flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-500 opacity-95"></div>
+                        <div class="text-center text-white relative z-10">
+                            <svg class="w-16 h-16 mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                            </svg>
+                            <p class="text-sm font-bold">Rally "Papi" Asfura</p>
+                            <p class="text-xs opacity-90">Apoyo Nacional</p>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <p class="text-sm text-gray-600 text-center">Unidad y fuerza del Partido Nacional</p>
+                    </div>
+                </div>
+                
+                <!-- Obras de Infraestructura -->
+                <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-blue-700 opacity-90"></div>
+                        <div class="text-center text-white relative z-10">
+                            <svg class="w-16 h-16 mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path>
+                            </svg>
+                            <p class="text-sm font-bold">Carreteras y Puentes</p>
+                            <p class="text-xs opacity-90">Infraestructura Moderna</p>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <p class="text-sm text-gray-600 text-center">Conectando comunidades de Atlántida</p>
+                    </div>
+                </div>
+                
+                <!-- Proyectos de Desarrollo -->
+                <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-blue-600 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-500 to-blue-600 opacity-90"></div>
+                        <div class="text-center text-blue-900 relative z-10">
+                            <svg class="w-16 h-16 mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"></path>
+                            </svg>
+                            <p class="text-sm font-bold text-white">Hospitales y Escuelas</p>
+                            <p class="text-xs opacity-90 text-white">Servicios Públicos</p>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <p class="text-sm text-gray-600 text-center">Mejorando la calidad de vida</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Nueva sección de galería expandida -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Aeropuerto Goloso -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <svg class="w-20 h-20 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"></path>
+                            </svg>
+                            <h4 class="font-bold text-lg">Aeropuerto Goloso</h4>
+                            <p class="text-sm opacity-90">Aduana Bimodal</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">Desarrollo del potencial logístico y comercial de Atlántida con vuelos internacionales.</p>
+                    </div>
+                </div>
+
+                <!-- Cayos Cochinos -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <svg class="w-20 h-20 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
+                            </svg>
+                            <h4 class="font-bold text-lg">Cayos Cochinos</h4>
+                            <p class="text-sm opacity-90">Turismo Sostenible</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">Desarrollo turístico responsable que preserve nuestro patrimonio natural y genere empleos.</p>
+                    </div>
+                </div>
+
+                <!-- Red Eléctrica -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <svg class="w-20 h-20 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M11 3a1 1 0 10-2 0v1a1 1 0 10 2 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.477.859h4z"></path>
+                            </svg>
+                            <h4 class="font-bold text-lg">Electrificación</h4>
+                            <p class="text-sm opacity-90">Energía para Todos</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">Expansión de la red eléctrica para llevar energía confiable a todas las comunidades.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resumen Ejecutivo -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Plan de Gobierno en 5 Minutos</h2>
+                <div class="section-divider w-24 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Nuestro compromiso con Atlántida se basa en propuestas concretas que dependen del apoyo 
+                    al ejecutivo de "Papi" Asfura para ser efectivas y transformar nuestro departamento.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Propuestas Principales -->
+    <section id="propuestas" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Propuestas Principales</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Propuesta 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Simplificación Administrativa</h3>
+                    <p class="text-gray-600">Hacer que los trámites dentro de la administración pública sean más expeditos y eficientes para los ciudadanos.</p>
+                </div>
+
+                <!-- Propuesta 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Red de Electrificación</h3>
+                    <p class="text-gray-600">Desarrollo de líneas de transmisión para garantizar el suministro eléctrico en todo el departamento.</p>
+                </div>
+
+                <!-- Propuesta 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Infraestructura</h3>
+                    <p class="text-gray-600">Aprovechar la Aduana Bimodal del Aeropuerto Goloso, vuelos internacionales, ejes carreteros y desarrollo de Cayos Cochinos.</p>
+                </div>
+
+                <!-- Propuesta 4 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Educación</h3>
+                    <p class="text-gray-600">Apoyo al CURLA, fortalecimiento de la logística escolar y educación bilingüe intercultural.</p>
+                </div>
+
+                <!-- Propuesta 5 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Salud</h3>
+                    <p class="text-gray-600">Fortalecimiento del Seguro Social, clínicas y hospitales para mejorar la atención médica.</p>
+                </div>
+
+                <!-- Propuesta 6 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Cultura, Arte y Deportes</h3>
+                    <p class="text-gray-600">Gestionar el regreso de la Secretaría de Pueblos Indígenas y Afrohondureños.</p>
+                </div>
+            </div>
+
+            <!-- Botón para ver todas las propuestas -->
+            <div class="text-center mt-12">
+                <button onclick="toggleAllProposals()" id="toggle-btn" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                    Ver Todas las Propuestas (20 puntos)
+                </button>
+            </div>
+
+            <!-- Propuestas adicionales (ocultas inicialmente) -->
+            <div id="additional-proposals" class="hidden mt-12">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Propuestas 7-20 -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">7. Seguridad</h3>
+                        <p class="text-gray-600">Generar políticas públicas y acciones afirmativas para combatir la extorsión.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">8. Seguridad Jurídica</h3>
+                        <p class="text-gray-600">Fortalecer las instituciones operadoras de justicia.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">9. Reformas Electorales</h3>
+                        <p class="text-gray-600">Velar por reformas que fortalezcan el sistema democrático.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">10. Ley de Liquidación de Fondos</h3>
+                        <p class="text-gray-600">Regular la distribución del uso de subsidios y subvenciones.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">11. Equidad de Género</h3>
+                        <p class="text-gray-600">Promover la igualdad de oportunidades entre hombres y mujeres.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">12. Interés Superior del Niño</h3>
+                        <p class="text-gray-600">Guarderías infantiles, fortalecimiento de SENAF y programas de capacitación.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">13. Tercera Edad</h3>
+                        <p class="text-gray-600">Presupuesto para asilos y fortalecimiento de la Fiscalía del Consumidor.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">14. Capacidades Especiales</h3>
+                        <p class="text-gray-600">Apoyo a escuelas especiales como Emilia D'Cuire y organizaciones afines.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">15. Transparencia</h3>
+                        <p class="text-gray-600">Implementación de veeduría social para garantizar transparencia.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">16. Contraloría Social</h3>
+                        <p class="text-gray-600">Fortalecimiento de mecanismos de control ciudadano.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">17. Capital Humano en Tecnología</h3>
+                        <p class="text-gray-600">Desarrollo acelerado en tecnologías tradicionales y modernas.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">18. Desarrollo Agrícola Sostenible</h3>
+                        <p class="text-gray-600">En armonía con la naturaleza y el medio ambiente.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">19. Descentralización</h3>
+                        <p class="text-gray-600">Gestión y decisiones relacionadas al desarrollo territorial.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">20. Apoyo a CICIH</h3>
+                        <p class="text-gray-600">Retomar el tratado de extradición para combatir el narcotráfico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre el Candidato -->
+    <section id="sobre-mi" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Abogado David Manaiza</h2>
+                    <div class="section-divider w-24 mb-6"></div>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Candidato a Diputado por el Departamento de Atlántida, comprometido con el desarrollo 
+                        y progreso de nuestra región. Con una sólida formación jurídica y experiencia en 
+                        gestión pública, trabajaré incansablemente por los intereses de los atlantideños.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                            <span class="text-gray-700">Partido Nacional de Honduras</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                            <span class="text-gray-700">Apoyo al movimiento de Nasry "Papi" Asfura</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                            <span class="text-gray-700">Compromiso con el desarrollo de Atlántida</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+                    <div class="text-center">
+                        <img src="https://github.com/rimedhn/davidmanaisadiputado/blob/main/Rostro%20David%20Manaiza.png?raw=true" 
+                             alt="David Manaiza" 
+                             class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-blue-600 shadow-lg"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-32 h-32 bg-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center hidden">
+                            <span class="text-white font-bold text-4xl">DM</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">David Manaiza</h3>
+                        <p class="text-blue-600 font-semibold mb-4">Abogado - Candidato a Diputado</p>
+                        <p class="text-gray-600">
+                            "Trabajando juntos por un Atlántida próspero, 
+                            con oportunidades para todos y desarrollo sostenible."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apoyo a Papi Asfura -->
+    <section class="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Apoyando a "Papi" Asfura</h2>
+                    <div class="w-24 h-1 bg-white mb-6"></div>
+                    <p class="text-xl mb-6 leading-relaxed">
+                        Nuestro compromiso con el movimiento presidencial de Nasry "Papi" Asfura es fundamental 
+                        para lograr el desarrollo que Atlántida necesita. Juntos trabajaremos por Honduras.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-white rounded-full"></div>
+                            <span>Unidad del Partido Nacional</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-white rounded-full"></div>
+                            <span>Desarrollo económico sostenible</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-white rounded-full"></div>
+                            <span>Fortalecimiento institucional</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white rounded-2xl p-8 shadow-2xl">
+                        <img src="https://scontent.fsap3-1.fna.fbcdn.net/v/t39.30808-6/479491732_661_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=yzQP3gm2EWkQ7kNvwF6nytF&_nc_oc=AdnJseM2i2Uo7ZnR5JOe-N6pAtjy38eSvJOeNKeyx_mEIoaPzKNuWPFHjbwOTyAwzgo&_nc_zt=23&_nc_ht=scontent.fsap3-1.fna&_nc_gid=HyQ6Wsu7aenqGMU5taj2mg&oh=00_AfaIhm4Fs23V3DWnfKpIqZuDF3WehaRKaqk2apSwRye7rw&oe=68DA03EC" 
+                             alt="Nasry Papi Asfura" 
+                             class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-blue-600 shadow-lg"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-32 h-32 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full mx-auto mb-6 flex items-center justify-center hidden">
+                            <span class="text-white font-bold text-2xl">PAPI</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Nasry "Papi" Asfura</h3>
+                        <p class="text-blue-600 font-semibold mb-4">Candidato Presidencial</p>
+                        <p class="text-gray-600 text-sm">
+                            "Juntos por un Honduras próspero y desarrollado"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">¡Juntos Construiremos el Futuro de Atlántida!</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                Tu voto es fundamental para hacer realidad estas propuestas. 
+                Apoyemos el movimiento de "Papi" Asfura y trabajemos por el desarrollo de nuestro departamento.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="scrollToSection('propuestas')" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                    Conocer Propuestas
+                </button>
+                <button onclick="scrollToSection('contacto')" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors">
+                    Contactar Campaña
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contacto</h2>
+                <div class="section-divider w-24 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600">
+                    ¿Tienes preguntas o quieres unirte a nuestro movimiento? ¡Contáctanos!
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Teléfono</h3>
+                    <p class="text-gray-600">Próximamente</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+                    <p class="text-gray-600">Próximamente</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Ubicación</h3>
+                    <p class="text-gray-600">Departamento de Atlántida, Honduras</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-4 mb-6">
+                    <img src="https://github.com/rimedhn/davidmanaisadiputado/blob/main/Rostro%20David%20Manaiza.png?raw=true" 
+                         alt="David Manaiza" 
+                         class="w-12 h-12 rounded-full object-cover border-2 border-blue-600"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hidden">
+                        <span class="text-white font-bold text-xl">DM</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">David Manaiza</h3>
+                        <p class="text-gray-400">Diputado por Atlántida - Partido Nacional</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    Apoyando el movimiento presidencial de Nasry "Papi" Asfura
+                </p>
+                <p class="text-sm text-gray-500">
+                    © 2024 David Manaiza - Campaña Electoral. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function toggleAllProposals() {
+            const additionalProposals = document.getElementById('additional-proposals');
+            const toggleBtn = document.getElementById('toggle-btn');
+            
+            if (additionalProposals.classList.contains('hidden')) {
+                additionalProposals.classList.remove('hidden');
+                toggleBtn.textContent = 'Ocultar Propuestas Adicionales';
+            } else {
+                additionalProposals.classList.add('hidden');
+                toggleBtn.textContent = 'Ver Todas las Propuestas (20 puntos)';
+                scrollToSection('propuestas');
+            }
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-xl');
+            } else {
+                header.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9844190766d631c0',t:'MTc1ODczNTk1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
